@@ -1,12 +1,12 @@
 import javax.swing.JOptionPane;
 
-public class Exercicio01Triangulo {
+public class Triangulo {
     float base, altura;
 
     void Triangulo(){
     }
 
-    public Exercicio01Triangulo(float base, float altura){
+    public Triangulo(float base, float altura){
         this.base = base;
         this.altura = altura;
     }
