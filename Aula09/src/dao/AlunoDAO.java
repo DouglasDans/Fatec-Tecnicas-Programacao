@@ -5,7 +5,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class AlunoDAO {
-
     public String insertAluno (Aluno aluno) {
         String resp = "";
         try {
@@ -36,7 +35,7 @@ public class AlunoDAO {
 
             while (rs.next()) {
                 Aluno aluno= new Aluno();
-                aluno.setRgm(rs.getString("rdm"));
+                aluno.setRgm(rs.getString("rgm"));
                 aluno.setNome(rs.getString("nome"));
                 aluno.setNota1(rs.getFloat("nota1"));
                 aluno.setNota2(rs.getFloat("nota2"));
@@ -51,6 +50,8 @@ public class AlunoDAO {
         }
         return lista;
     }
+
+
     public Aluno consultarAluno (String rgm){
         Aluno aluno = new Aluno();
         try {
@@ -58,7 +59,6 @@ public class AlunoDAO {
             Statement stmt = con.createStatement();
             String sql = "SELECT * FROM dados WHERE rgm = '"+rgm+"'";
             ResultSet rs = stmt.executeQuery(sql);
-
             if (rs.next()){
                 aluno.setRgm(rs.getString("rgm"));
                 aluno.setNome(rs.getString("nome"));
@@ -73,10 +73,16 @@ public class AlunoDAO {
             rs.close();
             stmt.close();
             con.close();
-        }catch(Exception e){
+        }catch (Exception e){
             e.printStackTrace();
         }
         return aluno;
+    }
+
+    public String alterarAluno (Aluno aluno){
+
+
+        return "OK";
     }
 }
 

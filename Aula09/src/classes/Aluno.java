@@ -1,19 +1,23 @@
 package classes;
 
 public class Aluno {
-
-
     private String rgm;
     private String nome;
     private float nota1;
     private float nota2;
 
-//    public Aluno(String rgm, String nome, float nota1, float nota2){
-//        this.rgm = "";
-//        this.nome = "";
-//        this.nota1 = 0;
-//        this.nota2 = 0;
-//    }
+    public Aluno(){
+        this.rgm = "";
+        this.nome = "";
+        this.nota1 = 0;
+        this.nota2 = 0;
+    }
+    public Aluno(String rgm, String nome, float nota1, float nota2){
+        this.rgm = rgm;
+        this.nome = nome;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
 
     public String getRgm() {
         return rgm;

@@ -8,7 +8,7 @@ public class Conecta {
         Connection con = null;
 
         String serverName = "localhost";
-        String myDataBase = "alunos";
+        String myDataBase = "aluno";
 
         String userName = "root";
         String password = "";
